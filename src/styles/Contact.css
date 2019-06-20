@@ -1,0 +1,38 @@
+#contact .content-wrapper{
+  margin: 0;
+}
+#contact .links{
+  display: flex;
+  flex-direction: row;
+  font-size: 3em;
+}
+
+#contact a{
+  margin: 0 0.5em;
+  cursor: pointer;
+  color: #888;
+}
+
+#contact a:first-child{
+  margin-left: 0;
+}
+#contact a.mail:hover{
+  color: #D44638;  
+}
+
+#contact a.github:hover{
+  color: #000;
+}
+
+#contact a.linkedin:hover{
+  color: #0077b5;
+}
+
+#contact a.blog:hover{
+  color: #eee;
+}
+
+#contact a.twitter:hover{
+  color: #38A1F3;
+}
+
