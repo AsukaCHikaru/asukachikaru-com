@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import '../styles/Summary.css';
+
 export default class Summary extends Component {
   render() {
     return (

@@ -1,0 +1,5 @@
+export const navLaStr = {
+  en: 'English',
+  zh: '中文',
+  jp: '日本語'
+}

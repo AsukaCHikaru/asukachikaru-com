@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { about } from '../strings';
+import { about } from '../constants/about';
 
 import '../styles/About.css';
 

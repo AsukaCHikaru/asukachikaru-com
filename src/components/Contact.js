@@ -40,3 +40,7 @@ export default class Contact extends Component {
     )
   }
 }
+
+Contact.defaultProps = {
+  la: 'en'
+}

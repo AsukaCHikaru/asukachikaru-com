@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 export default class PortfolioItem extends Component {
   constructor(props){
     super(props);
@@ -7,12 +8,9 @@ export default class PortfolioItem extends Component {
       isHovered: false,
     }
   }
-  componentWillMount(){
-
-  }
   renderPortfolioItemContent = () => {
     const style = {
-      backgroundColor:`#282828DD`
+      backgroundColor:`#222222EE`
     }
     const className = (this.state.isHovered) ? 'portfolio-item hovered' : 'portfolio-item';
     return (

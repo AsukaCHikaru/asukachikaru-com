@@ -1,3 +1,6 @@
+$darkSubTextColor: #eee;
+$lightSubTextColor: #111;
+
 #contact .content-wrapper{
   margin: 0;
 }
@@ -28,8 +31,11 @@
   color: #0077b5;
 }
 
-#contact a.blog:hover{
-  color: #eee;
+.dark #contact a.blog:hover{
+  color: $darkSubTextColor;
+}
+.light #contact a.blog:hover{
+  color: $lightSubTextColor;
 }
 
 #contact a.twitter:hover{

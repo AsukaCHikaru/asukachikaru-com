@@ -5,28 +5,32 @@
   display: grid;
   grid-template-rows: 30% 50%;
   grid-template-columns: 50% 50%;
-}
-#about .content-wrapper p{
-  grid-area: 1/ 1/ 2/ 3;
-}
 
-#about .content-wrapper .skills{
-  grid-area: 2/ 1/ 2/ 2;
-}
-#about .content-wrapper .list-wrapper{
-  display: flex; 
-  flex-direction: row;
-}
-#about .content-wrapper .list-wrapper div{
-  margin: 0 1em;
-}
-#about .content-wrapper .list-wrapper div:first-child{
-  margin-left: 0;
-}
-#about ul{
-  padding-left: 0;
-}
-#about li{
-  list-style: none;
+  & p{
+    grid-area: 1/ 1/ 2/ 3;
+  }
+
+  & .skills{
+    grid-area: 2/ 1/ 2/ 2;
+  }
+  & .list-wrapper{
+    display: flex; 
+    flex-direction: row;
+
+    & div{
+      margin: 0 1em;
+
+      & ul{
+        padding-left: 0;
+      }
+      & li{
+        list-style: none;
+      }
+    }
+
+    & div:first-child{
+      margin-left: 0;
+    }
+  }
 }
 
