@@ -17,7 +17,7 @@ export default class PortfolioItem extends Component {
       <div style={style} className={className}>
         <h3>{this.props.item.title}</h3>
         <p>{this.props.item.about}</p>
-        <h4>{this.props.item.builtWith}</h4>
+        <h4>{this.props.item.builtWith.join(', ')}</h4>
       </div>
     )
   }

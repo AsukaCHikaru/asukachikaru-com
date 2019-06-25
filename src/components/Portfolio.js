@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltRight } from '@fortawesome/pro-light-svg-icons';
+import { faArrowAltRight, faArrowAltLeft } from '@fortawesome/pro-light-svg-icons';
 
 import PortfolioItem from './PortfolioItem';
 import { portfolio } from '../constants/portfolio';
@@ -12,12 +12,16 @@ export default class Portfolio extends Component {
     super(props);
     this.portfolio = [];    
     this.featured = [];
+    this.wrapperWidth = 0;
     this.state = {
       showmore: false,
     };
   }
   componentWillMount(){
     this.mapPortfilioToThis();
+  }
+  componentDidMount(){
+    this.wrapperWidth = document.querySelector('.feat').scrollWidth.toString();
   }
   mapPortfilioToThis = () =>{
     for (const key in portfolio) {
@@ -52,20 +56,31 @@ export default class Portfolio extends Component {
         </div>
       </div>
     )
-  }; 
+  };
+  renderBackBtn = () => {
+    return (
+      <div className='portfolio-item-wrapper backBtn'>
+        <div className='portfolio-item'>
+          <h3 onClick={() => {
+            this.setState(preState => ({showmore: !preState.showmore}))
+          }}><FontAwesomeIcon icon={faArrowAltLeft} /> BACK</h3>
+        </div>
+      </div>
+    )
+  };
   render() {
    
     return (
       <div id='portfolio'>
         <h1>SOME THINGS I'VE BUILT</h1>
         <div className='content-wrapper'>
-          <div className='feat' style={{left: (this.state.showmore) ? '0' : '0'}}>
+          <div className='feat' style={{left: (this.state.showmore) ? `-${this.wrapperWidth}px` : '0'}}>
             {this.renderFeatPortfolios()}
             {this.renderMoreBtn()}
           </div>
-          <div className='moreDiv' style={{left: (this.state.showmore) ? '-880px' : '0'}}>
+          <div className='moreDiv' style={{left: (this.state.showmore) ? `-${this.wrapperWidth}px` : '0'}}>
             {this.renderMorePortfolios()}
-            {this.renderMoreBtn()}
+            {this.renderBackBtn()}
           </div>
         </div>
       </div>

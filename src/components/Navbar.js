@@ -59,7 +59,7 @@ export default class Navbar extends Component {
               {this.renderLaList()}
             </div>
           </div>
-            <button onClick={() => this.props.changeDarkMode()}><FontAwesomeIcon icon={(this.props.dark) ? faSun : faMoon} /></button>
+            <button className='darkMode' onClick={() => this.props.changeDarkMode()}><FontAwesomeIcon icon={(this.props.dark) ? faSun : faMoon} /></button>
 
         </div>
       </nav>
