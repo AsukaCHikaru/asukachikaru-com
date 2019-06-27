@@ -25,7 +25,8 @@ export default class App extends Component {
   }
   componentWillMount(){
     window.addEventListener('scroll', this.handleScroll);
-    if(this.state.la===null) this.setState({la: navigator.language}) 
+    // if(this.state.la===null) this.setState({la: navigator.language}) 
+    this.getNaviLa();
     this.renderNewBGColor();
   }
   componentDidMount(){
@@ -38,6 +39,23 @@ export default class App extends Component {
   }
   componentWillUnmount(){
     window.removeEventListener('scroll', this.handleScroll);
+  }
+  getNaviLa = () => {
+    let la;
+    switch (navigator.language) {
+      case 'jp':
+        la = 'jp';
+        break;
+      case 'zh-tw':
+      case 'zh-cn':
+      case 'zh-hk':
+        la = 'zh';
+        break;
+      default:
+        la = 'en';
+        break;
+    }
+    this.setState({la});
   }
   changeLa = (newLa) => {
     this.setState({la: newLa})
@@ -75,7 +93,7 @@ export default class App extends Component {
         <div className='content-wrapper'>
           <Summary />
           <Portfolio />
-          <About />
+          <About la={this.state.la}/>
           <Contact />
           <Footer />
         </div>

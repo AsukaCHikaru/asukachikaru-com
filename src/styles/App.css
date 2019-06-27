@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,400,700|Work+Sans:600&display=swap');
 
 $darkBGColor: #1c1c20;
-$darkMainTextColor: #ccc;
+$darkMainTextColor: #aaa;
 $darkSubTextColor: #eee;
 $darkShadowColor: #111;
 
@@ -12,7 +12,7 @@ $lightShadowColor: #888;
 
 html, body{  
   font-size: 22px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Noto Sans JP',sans-serif;  
 }
 
 .dark{
@@ -24,30 +24,31 @@ html, body{
 
     & a, & button{
       color: #888;
-      &:hover{
-        color: $darkSubTextColor;
-      }
       &.title{
         color: $darkSubTextColor;
       }
-      &.curr{
-        color: $darkSubTextColor;
-      }
     }
 
-    & .resume, & .opt{
-      /* border-left: solid 1px $darkSubTextColor; */
+    & .resume a{
+      border-left: solid 1px $darkSubTextColor;
+      border-right: solid 1px $darkSubTextColor;
     }
 
-    & .opt .la{
+    & .darkMode {
+      background-color: $lightBGColor;
       &:hover{
-        background-color: $darkBGColor;
-        box-shadow: 0 0.1em 0.1em 0.1em $darkShadowColor;
+        color: $lightSubTextColor;
       }
     }
   }
   & h1{
     color: $darkSubTextColor;
+  }
+
+  & #summary{
+    & .name{
+      color: $darkSubTextColor;
+    }
   }
 
   & #portfolio {
@@ -76,31 +77,31 @@ html, body{
 
     & a, & button{
       color: #888;
-      &:hover{
-        color: $lightSubTextColor;
-      }
       &.title{
         color: $lightSubTextColor;
       }
-      &.curr{
-        color: $lightSubTextColor;
-      }
     }
 
-    & .resume, & .opt{
-      /* border-left: solid 1px $lightSubTextColor; */
+    & .resume a{
+      border-left: solid 1px $lightSubTextColor;
+      border-right: solid 1px $lightSubTextColor;
     }
 
-    & .opt .la{
-      /* background-color: $lightBGColor; */
+    & .darkMode {
+      background-color: $darkBGColor;
       &:hover{
-        background-color: $lightBGColor;
-        box-shadow: 0 0.1em 0.1em 0.1em $lightShadowColor;
+        color: $darkSubTextColor;
       }
     }
   }
   & h1{
     color: $lightSubTextColor;
+  }
+
+  & #summary{
+    & .name{
+      color: $lightSubTextColor;
+    }
   }
 
   & #portfolio {
@@ -137,8 +138,6 @@ nav{
   & .content-wrapper{
     display: flex; 
     justify-content: flex-end;
-    /* margin-top: 0.8em; */
-    /* margin-bottom: 0.8em; */
     line-height: 3em;
 
     & a, & button{
@@ -149,66 +148,68 @@ nav{
       font-size: 1em;
       text-decoration: none;
       background-color: transparent;      
+      font-weight: 200;
+      
+      &.curr{
+        color: #478fff;
+      }
+      &:hover{
+        
+      }
+
       
       &:focus{
         outline: none;
       }
     }
 
+    & .resume, & .opt{
+      padding-left: 0.2em;
+    }
+
     & a.title{      
       margin-left: 0;
       margin-right: auto;      
       transition: none;
-    }    
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+    }
 
-    & .resume, & .opt{
-      margin-left: 0.2em; 
-      padding-left: 0.2em; 
-    }    
+    & .resume a{
+      padding: 0 0.4em;
+    }
 
-    & .opt{
-      height: 3em;
-      line-height: 3em;
-      & button{
-        /* width: 3em; */
-      }      
+    & .opt{      
       & .la{
-        display: inline-block;        
-        height: 4em;
-        /* width: 3.5em;       */
-        overflow: hidden;
-        transition: all 0.2s ease;
-        
-        &:hover{          
-          height: 9em;  
-          
-          & button{
-            display: block;           
-          }
-        }
-        & button{
-          display: none;
-          line-height: 3em;
-          &:first-child{
-            display: block;
-          }         
+        display: inline-block;    
+        & .curr{
+          color: #478fff;
         }
       }    
+      & button.darkMode{        
+        margin-left: 0.2em;
+        width: 1.4em;
+        height: 1.4em;
+        border-radius: 0.2em;
+      }    
     }
-    & .la button, & .darkMode{
-      height: 3em;
-      width: 4em;
-    }
-    & .darkMode{
-      width: 2em;
-    }    
   } 
-  
 }
 
-#summary, #portfolio, #about, #contact{
-  padding-top: 8vh;
-  height: 82vh;
+#portfolio, #about, #contact{
+  padding-top: 14vh;
+  height: 76vh;
+
+  & h1{
+    margin-bottom: 0.5em;
+  }
+  & p{
+    margin-top: 0;
+  }
+}
+#summary{
+  padding-top: 14vh;
+  height: 76vh;
 }
 
 footer{  

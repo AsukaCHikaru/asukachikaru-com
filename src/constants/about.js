@@ -33,10 +33,27 @@ export const about = {
           jp: 'その他',
           en: 'Others'
         },
-        zh: ['Appium', '中文', '日文', '英文'],
-        jp: ['Appium', '中国語', '日本語', '英語'],
-        en: ['Appium', 'Mandarin', 'Japanese', 'English'],
-      }
+        content: ['Appium'],
+      },
+      {
+        meta: {
+          zh: '工具軟體',
+          jp: 'ツール',
+          en: 'Tool'
+        },
+        content: ['Git'],
+      },
+      {
+        meta: {
+          zh: '語言',
+          jp: '言語',
+          en: 'Language'
+        },
+        zh: ['中文', '日文', '英文'],
+        en: ['Mandarin', 'Japanese', 'English'],
+        jp: ['中国語', '日本語', '英語']
+      },
+
     ]
   }
 }

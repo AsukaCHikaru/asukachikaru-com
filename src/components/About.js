@@ -43,12 +43,6 @@ export default class About extends Component {
         <div className='content-wrapper'>
           <p>{about.p[la]}</p>          
           {this.renderLists('skills')}          
-          <div className='interests'>
-            <h3>INTERESTS</h3>  
-            <div className='list-wrapper'>
-
-            </div>
-          </div>
         </div>
       </div>
     )
