@@ -43,8 +43,8 @@ export default class App extends Component {
   getNaviLa = () => {
     let la;
     switch (navigator.language) {
-      case 'jp':
-        la = 'jp';
+      case 'ja':
+        la = 'ja';
         break;
       case 'zh-tw':
       case 'zh-cn':
@@ -91,10 +91,10 @@ export default class App extends Component {
           la={this.state.la}
         />
         <div className='content-wrapper'>
-          <Summary />
+          <Summary la={this.state.la} />
           <Portfolio />
-          <About la={this.state.la}/>
-          <Contact />
+          <About la={this.state.la} />
+          <Contact la={this.state.la} />
           <Footer />
         </div>
       </div>

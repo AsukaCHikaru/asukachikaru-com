@@ -45,22 +45,14 @@ export default class Portfolio extends Component {
   renderMoreBtn = () => {
     return (
       <div className='portfolio-item-wrapper moreBtn'>
-        <div className='portfolio-item'>
-          <h3 onClick={() => {
-            this.setState(preState => ({showmore: !preState.showmore}))
-          }}>MORE <FontAwesomeIcon icon={faArrowAltRight} /></h3>
-        </div>
+        
       </div>
     )
   };
   renderBackBtn = () => {
     return (
       <div className='portfolio-item-wrapper backBtn'>
-        <div className='portfolio-item'>
-          <h3 onClick={() => {
-            this.setState(preState => ({showmore: !preState.showmore}))
-          }}><FontAwesomeIcon icon={faArrowAltLeft} /> BACK</h3>
-        </div>
+       
       </div>
     )
   };
@@ -72,11 +64,9 @@ export default class Portfolio extends Component {
         <div className='content-wrapper'>
           <div className='feat' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
             {this.renderFeatPortfolios()}
-            {this.renderMoreBtn()}
           </div>
           <div className='moreDiv' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
             {this.renderMorePortfolios()}
-            {this.renderBackBtn()}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { about } from '../constants/about';
+import { ABOUT } from '../constants/about';
 
 import '../styles/About.css';
 
@@ -18,7 +18,7 @@ export default class About extends Component {
   }
   renderLists = (listName) => {
     const la = this.props.la;        
-    const lists = about[listName].list.map((item, i) => 
+    const lists = ABOUT[listName].list.map((item, i) => 
       <div key={`${listName}-list-${i}`}>
         <h3>{item.meta[la]}</h3>
         <ul>
@@ -28,7 +28,7 @@ export default class About extends Component {
     );
     return (
       <div className={listName}>
-        <h3>{about[listName].meta[la]}</h3>
+        <h3>{ABOUT[listName].meta[la]}</h3>
         <div className='list-wrapper'>    
           {lists}
         </div>
@@ -41,7 +41,7 @@ export default class About extends Component {
       <div id='about'>
         <h1>ABOUT ME</h1>
         <div className='content-wrapper'>
-          <p>{about.p[la]}</p>          
+          <p>{ABOUT.p[la]}</p>          
           {this.renderLists('skills')}          
         </div>
       </div>

@@ -50,10 +50,12 @@ export default class Navbar extends Component {
               className={this.props.currSec==='contact' ? 'curr' : ''} 
               onClick={() => this.handleClick('contact')}
             >contact</button>
+            <span className='nav-separator'>|</span>
           </div>
           <div className='resume'>
             <a href='https://drive.google.com/file/d/16fU5vRsJIjSC2Rj6DmrsdPbJ8NtizD_x/view?usp=sharing' target='_blank' rel='noopener noreferrer'
             >resume</a>
+            <span className='nav-separator'>|</span>
           </div>
           <div className='opt'>
             <div className='la'>

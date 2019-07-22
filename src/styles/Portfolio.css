@@ -2,29 +2,29 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 
 #portfolio .content-wrapper {
-  margin: 0;
-  height: 85%;
+  margin: auto;
   display: flex; 
   flex-direction: row;
   padding: 1% 0;
+  height: 85%;
   overflow: hidden;
 
   & .feat{    
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    margin: 0;
+    grid-template-columns: 17em 17em;
+    grid-template-rows: 10em 10em;
+    position: relative;
+    margin: auto;
     height: 100%;
     min-width: 100%;
-    position: relative;
     transition: all 0.5s ease;
 
     & .portfolio-item-wrapper{
-      width: 20em;
-      height: 11em; 
+      width: 16em;
+      height: 9em;
 
       & .portfolio-item{
-        margin-top: 9em;
+        margin-top: 7em;
       }
     }
   }
@@ -49,15 +49,14 @@
   }
   & .portfolio-item-wrapper{
     display: inline-block;
-    margin: 0 auto;
-    margin-bottom: 1em;    
+    margin: auto;
     overflow: hidden;
     font-family: 'Work Sans';
  
     & .portfolio-item{  
       height: 100%;
       width: 100%;
-      padding: 0;      
+      padding: 0;  
       word-break: normal;      
       transition: margin-top 0.2s ease;
       color: #aaa;
