@@ -10,7 +10,7 @@ import { CONTACT } from '../constants/contact';
 export default class Contact extends Component {
   render() {
     return (
-      <div id='contact'>
+      <div id='contact' className='main-wrapper'>
         <h1>FOLLOW ME</h1>
         <div className='content-wrapper'>
           <p>{CONTACT.p[this.props.la]}</p>

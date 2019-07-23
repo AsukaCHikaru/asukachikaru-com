@@ -36,28 +36,30 @@ export default class Summary extends Component {
 
   render() {
     return (
-      <div id='summary'>
-        <div className='intro'>
-          {this.renderIntro()}
-          {/* <h1>Hi, </h1>
-          <h1>my name is <span className='name'>Asuka Wang</span>.</h1>
-          <h2>I'm a self-taught <span className='front-end'>Front-End</span> web developer</h2>
-          <h2>based in <span className='base'>Fukuoka, Japan</span>.</h2>
-          <h2>I love <span className='passion'>learning and building</span> web stuff.</h2> */}
+      <div id='summary' className='main-wrapper'>
+        {/* <div className='content-wrapper'> */}
+          <div className='intro'>
+            {this.renderIntro()}
+            {/* <h1>Hi, </h1>
+            <h1>my name is <span className='name'>Asuka Wang</span>.</h1>
+            <h2>I'm a self-taught <span className='front-end'>Front-End</span> web developer</h2>
+            <h2>based in <span className='base'>Fukuoka, Japan</span>.</h2>
+            <h2>I love <span className='passion'>learning and building</span> web stuff.</h2> */}
+          </div>
+          <div className='start'>
+            <h2 onClick={() => {
+              const targetY = document.querySelector(`#portfolio`).offsetTop;    
+              window.scrollTo({
+                top: targetY,
+                left: 0,
+                behavior: 'smooth'
+              });
+            }}>
+              <FontAwesomeIcon icon={faCaretDown} />
+            </h2>
+          </div>
         </div>
-        <div className='start'>
-          <h2 onClick={() => {
-            const targetY = document.querySelector(`#portfolio`).offsetTop;    
-            window.scrollTo({
-              top: targetY,
-              left: 0,
-              behavior: 'smooth'
-            });
-          }}>
-            <FontAwesomeIcon icon={faCaretDown} />
-          </h2>
-        </div>
-      </div>
+      // </div>
     )
   }
 }

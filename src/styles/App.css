@@ -62,6 +62,7 @@ html, body{
   }
 
   & #portfolio {
+
     & .portfolio-item-wrapper{
       box-shadow: 0em 0.2em 0.3em 0.2em $darkShadowColor;
 
@@ -69,12 +70,17 @@ html, body{
         color: $darkSubTextColor;
       }
     }
+
     & .moreDiv .portfolio-item-wrapper{
       box-shadow: 0em 0.1em 0.2em 0.1em $darkShadowColor;
 
       &.moreBtn, &.backBtn{
         box-shadow: none;
       }
+    }
+
+    & .page-button-container button{
+      color: $darkMainTextColor;
     }
   }
 }
@@ -127,6 +133,7 @@ html, body{
   }
 
   & #portfolio {
+
     & .portfolio-item-wrapper{
     box-shadow: 0em 0.2em 0.3em 0.2em $lightShadowColor;
 
@@ -142,10 +149,14 @@ html, body{
         box-shadow: none;
       }
     }
+
+    & .page-button-container button{
+      color: $lightMainTextColor;
+    }
   }
 }
 
-.content-wrapper{
+.main-wrapper{
   margin: auto;
   width: 900px;
 }
@@ -161,7 +172,9 @@ nav{
   & .content-wrapper{
     display: flex; 
     justify-content: flex-end;
+    margin: auto;
     line-height: 3em;
+    width: 900px;
 
     & a, & button{
       padding: 0;
@@ -220,7 +233,7 @@ nav{
   } 
 }
 
-#portfolio, #about, #contact{
+#portfolio, #about{
   padding-top: 10vh;
   height: 80vh;
 
@@ -236,14 +249,23 @@ nav{
   height: 76vh;
 }
 
-footer{  
-  text-align: center;
+#contact{
+  padding-top: 10vh;
+  height: 70vh;
+}
 
+footer{  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 20vh;
+  
   & h5{
-    margin: 0;
+    margin: auto;
     font-size: 0.7em;  
-    line-height: 8vh;
+    /* line-height: 8vh; */
     font-weight: 400;
-    margin-bottom: 2vh;
+    /* margin-bottom: 3em; */
   }
 }

@@ -34,7 +34,7 @@ export default class Navbar extends Component {
   
   render() {
     return (
-      <nav className="navbar">
+      <nav className='navbar'>
         <div className='content-wrapper'>
           <a href='/' className='title'>Asuka 'asukachikaru' Wang</a>
           <div className='nav-btn'>

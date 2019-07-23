@@ -1,6 +1,6 @@
 export const INTRO = {
   en: [
-    "Hi",
+    "Hi,",
     "my name is $name.",
     "I'm a self-taught $fe web developer",
     "based in $base.",

@@ -90,13 +90,11 @@ export default class App extends Component {
           dark={this.state.dark}
           la={this.state.la}
         />
-        <div className='content-wrapper'>
-          <Summary la={this.state.la} />
-          <Portfolio />
-          <About la={this.state.la} />
-          <Contact la={this.state.la} />
-          <Footer />
-        </div>
+        <Summary la={this.state.la} />
+        <Portfolio />
+        <About la={this.state.la} />
+        <Contact la={this.state.la} />
+        <Footer />
       </div>
     );
   }

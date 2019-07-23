@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltRight, faArrowAltLeft } from '@fortawesome/pro-light-svg-icons';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import PortfolioItem from './PortfolioItem';
 import { portfolio } from '../constants/portfolio';
@@ -42,17 +42,31 @@ export default class Portfolio extends Component {
       })
     )
   }
-  renderMoreBtn = () => {
-    return (
-      <div className='portfolio-item-wrapper moreBtn'>
-        
+  renderNextPageBtn = () => {
+    return(
+      <div className='page-button-container'>
+        <button
+          className={(this.state.showmore===true) ? 'hide next' : 'next'}
+          onClick={() => {
+            if(this.state.showmore===false) this.setState({showmore: true})
+          }}
+        >
+          <FontAwesomeIcon icon={faCaretRight} />
+        </button>
       </div>
     )
   };
-  renderBackBtn = () => {
+  renderPrevPageBtn = () => {
     return (
-      <div className='portfolio-item-wrapper backBtn'>
-       
+      <div className='page-button-container prev'>
+        <button
+          className={(this.state.showmore===false) ? 'hide prev' : 'prev'}
+          onClick={() => {
+            if(this.state.showmore===true) this.setState({showmore: false})
+          }}
+        >
+          <FontAwesomeIcon icon={faCaretLeft} />
+        </button>
       </div>
     )
   };
@@ -60,14 +74,24 @@ export default class Portfolio extends Component {
    
     return (
       <div id='portfolio'>
-        <h1>SOME THINGS I'VE BUILT</h1>
-        <div className='content-wrapper'>
-          <div className='feat' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
-            {this.renderFeatPortfolios()}
+        <div className='main-wrapper'>
+        {this.renderPrevPageBtn()}
+          <div className='sub-wrapper'>
+            <h1>SOME THINGS I'VE BUILT</h1>
+            <div className='content-wrapper'>
+              <div className='semi-content-wrapper' >
+                <div className='feat' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
+                  {this.renderFeatPortfolios()}
+                </div>
+              </div>
+              <div className='semi-content-wrapper' >
+                <div className='moreDiv' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
+                  {this.renderMorePortfolios()}
+                </div>
+              </div>
+            </div>
           </div>
-          <div className='moreDiv' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
-            {this.renderMorePortfolios()}
-          </div>
+          {this.renderNextPageBtn()}
         </div>
       </div>
     )
