@@ -6,6 +6,7 @@ import PortfolioItem from './PortfolioItem';
 import { portfolio } from '../constants/portfolio';
 
 import '../styles/Portfolio.css';
+import '../styles/rwd.css';
 
 export default class Portfolio extends Component {
   constructor(props){
