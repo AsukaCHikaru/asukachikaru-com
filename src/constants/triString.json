@@ -1,0 +1,104 @@
+{
+    "zhtw": {
+        "location": ["台灣新北", "日本福岡"],
+        "zhtw": {
+            "title": "繁體中文",
+            "achivement": [
+                "母語",
+                "文學寫作經驗"
+            ]
+        },
+        "jp": {
+            "title": "日文",
+            "achivement": [
+                "JLPT N1",
+                "五年以上日本生活經驗",
+                "四年以上日本工作經驗"
+            ]
+        },
+        "enus": {
+            "title": "英文",
+            "achivement": [
+                "多益 935分",
+                "具備進階英語會話能力"
+            ]
+        },
+        "skillsTitle": "技能",
+        "portfoliosTitle": "作品集",
+        "aboutTitle": "關於我",
+        "about": [
+            "我是Asuka Wang (asukachikaru)，自學的軟體工程師。",
+            "工作需求斷斷續續摸過C#與VBA，", 
+            "目前工作使用Express, Node.js與Appium，",
+            "自學網頁前端開發的各項技術中。"],
+        "followMeTitle": "關注我"
+    },
+    "enus":{
+        "location": ["New Taipei City, Taiwan", "Fukuoka, Japan"],
+        "zhtw": {
+            "title": "Mandarin",
+            "achivement": [
+                "Native speaker",
+                "Literature writing experience"
+            ]
+        },
+        "jp": {
+            "title": "Japanese",
+            "achivement": [
+                "JLPT N1",
+                "Living in Japan (over 5 years)",
+                "Work experience (over 4 years)"
+            ]
+        },
+        "enus": {
+            "title": "English",
+            "achivement": [
+                "TOEIC 935 points",
+                "Capable of lengthy conversations & discussions"
+            ]
+        },
+        "skillsTitle": "Skills",
+        "portfoliosTitle": "Portfolios",
+        "aboutTitle": "About",
+        "about": [
+            "I'm Asuka Wang (asukachikaru), a self-taught programmer.", 
+            "Touched a little bit of C# and VBA for past jobs,", 
+            "using Express, Node.js and Appium for current job,", 
+            "self teaching Front-End web developing skills."],
+        "followMeTitle": "Follow Me"
+    },
+    "jp":{
+        "location": ["台湾新北市", "福岡"],
+        "zhtw": {
+            "title": "中国語",
+            "achivement": [
+                "母国語",
+                "小説執筆経験あり"
+            ]
+        },
+        "jp": {
+            "title": "日本語",
+            "achivement": [
+                "日本語能力試験 1級",
+                "日本在住(5年以上)",
+                "日本企業就労(4年以上)"
+            ]
+        },
+        "enus": {
+            "title": "英語",
+            "achivement": [
+                "TOEIC 935点",
+                "スムーズな意思疎通可"
+            ]
+        },
+        "skillsTitle": "Skills",
+        "portfoliosTitle": "Portfolios",
+        "aboutTitle": "About",
+        "about": [
+            "はじめまして、アスカ (asukachikaru)です。",
+            "C#及びVBAを用いた実務経験があり、", 
+            "現在はExpress, Node.jsとAppuimを使用しています。", 
+            "フロントエンドウェブ開発において各種技術を独学中。"],
+        "followMeTitle": "Follow Me"
+    }
+}

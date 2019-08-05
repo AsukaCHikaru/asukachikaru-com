@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Work+Sans:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+#portfolio .main-wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 900px auto;
+
+  & .sub-wrapper{
+    grid-column-start: 2;
+    margin: 0 auto;
+    width: 900px;
+  }
+
+  & .content-wrapper{
+    margin: auto;
+    display: flex; 
+    flex-direction: row;
+    padding: auto;
+    height: 85%;
+    overflow: hidden;
+    
+  }
+
+  & .semi-content-wrapper{
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+  }
+
+  & .feat{
+    display: grid;
+    grid-template-columns: 18em 18em;
+    grid-template-rows: 11em 11em;
+    position: relative;
+    margin: 0 auto auto auto;
+    transition: all 0.5s ease;
+
+    & .portfolio-item-wrapper{
+      width: 16em;
+      height: 9em;
+
+      & .portfolio-item{
+        margin-top: 7em;
+      }
+    }
+  }
+  & .moreDiv{
+    display: grid;
+    position: relative;    
+    grid-template-columns: 15.3em 15.3em 15.3em;
+    grid-template-rows: 9.1em 9.1em 9.1em;
+    transition: all 0.5s ease;
+    font-size: 0.8em;
+    margin: 0;
+    & .portfolio-item-wrapper{
+      width: 14.3em;
+      height: 8.1em; 
+
+      & .portfolio-item{        
+        margin-top: 6em;
+      }
+    }
+  }
+  & .portfolio-item-wrapper{
+    display: inline-block;
+    margin: auto;
+    overflow: hidden;
+    font-family: 'Work Sans';
+ 
+    & .portfolio-item{  
+      height: 100%;
+      width: 100%;
+      padding: 0;  
+      word-break: normal;      
+      transition: margin-top 0.2s ease;
+      color: #aaa;
+      
+      &.hovered{
+        margin-top: 0;
+      }
+      
+      & h3{
+        color: #eee;
+        margin: 0;
+        padding: 0.5em;            
+        font-size: 1em;
+        font-weight: 400;
+        
+      }
+      & p{
+        margin: 0;
+        padding: 0 0.5em;
+        /* padding-bottom: 0.5em; */
+        font-size: 0.9em;
+      }
+      & h4{
+        margin: 0;
+        padding: 0.5em;              
+        font-size: 0.95em;
+        font-weight: 400;
+        color: #01ce42;
+        font-family: 'Dosis', sans-serif;
+      }
+
+      & a.ext-link{
+        color: #aaa;
+        font-size: 0.9em;
+        padding: 0.5em;
+        &:hover{
+          color: #478fff;
+        }
+      }
+    }
+    
+    
+  }
+
+  & .page-button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & button{
+      width: 1em;
+      font-size: 2em;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      &:focus{
+        outline: none;
+      }
+
+      &.hide{
+        color: transparent;
+        cursor: default;
+      }
+
+      &.next{
+        margin: 0 auto 0 1em;
+      }
+      
+      &.prev{
+        margin: 0 1em 0 auto;
+      }
+    }
+  }
+  
+}

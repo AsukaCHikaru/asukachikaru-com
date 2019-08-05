@@ -1,0 +1,42 @@
+#about .content-wrapper{
+  margin: 0 auto;
+  height: 100%;
+  width: 900px;
+  display: grid;
+  grid-template-rows: 30% 50%;
+  grid-template-columns: 100%;
+
+  & h3{
+    margin: 0.5em 0;
+  }
+
+  & .skills .list-wrapper{
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    & h3{
+      margin: 0;
+    }
+
+    & div{
+      /* margin: 0 1em; */
+      width: 19%;
+      & h3{
+        font-size: 1em;
+      }
+
+      & ul{
+        padding-left: 0;
+        margin: 0;
+      }
+      & li{
+        list-style: none;
+      }
+    }
+
+    & div:first-child{
+      margin-left: 0;
+    }
+  }
+}
+
