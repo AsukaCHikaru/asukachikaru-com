@@ -13,6 +13,7 @@ $lightShadowColor: #888;
 html, body{  
   font-size: 22px;
   font-family: 'Noto Sans JP',sans-serif;  
+  margin: 0;
 }
 
 .dark{
@@ -156,6 +157,10 @@ html, body{
   }
 }
 
+.root{
+  width: 100%;
+}
+
 .main-wrapper{
   margin: auto;
   width: 900px;
@@ -267,5 +272,34 @@ footer{
     /* line-height: 8vh; */
     font-weight: 400;
     /* margin-bottom: 3em; */
+  }
+}
+
+@media all and (max-width: 1200px){
+
+  html, body{
+    font-size: 20px;
+  }
+
+  .main-wrapper{
+    width: 800px;
+  }
+
+  nav .content-wrapper{
+    width: 800px;
+  }
+
+  #portfolio .sub-wrapper{
+    width: 800px;
+  }
+}
+
+@media all and (max-width: 768px){
+
+  html, body{
+    font-size: 18px;
+  }
+  .main-wrapper, nav .content-wrapper, #portfolio .sub-wrapper{
+    width: 700px;
   }
 }

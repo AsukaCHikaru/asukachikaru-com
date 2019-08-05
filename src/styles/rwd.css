@@ -1,0 +1,24 @@
+@media all and (max-width: 1200px){
+
+  html, body{
+    font-size: 16px;
+  }
+
+  .main-wrapper{
+    width: 700px;
+  }
+
+  nav .content-wrapper{
+    width: 700px;
+  }
+
+  #portfolio .sub-wrapper{
+    width: 700px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .main-wrapper{
+    width: 500px;
+  }
+}
