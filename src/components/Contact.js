@@ -10,11 +10,11 @@ import { CONTACT } from '../constants/contact';
 export default class Contact extends Component {
   render() {
     return (
-      <div id='contact' className='main-wrapper'>
+      <div id='contact' className='main-container'>
         <h1>FOLLOW ME</h1>
-        <div className='content-wrapper'>
+        <div className='content-container'>
           <p>{CONTACT.p[this.props.la]}</p>
-          <div className='links'>
+          <div className='links-container'>
             <a 
               className='mail'
               href={`mailto: ${CONTACT.href.mail}`}

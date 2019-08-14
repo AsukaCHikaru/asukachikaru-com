@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,400,700|Work+Sans:600&display=swap');
 
-$darkBGColor: #1c1c20;
+$darkBGColor: #202024;
 $darkMainTextColor: #aaa;
 $darkSubTextColor: #eee;
 $darkShadowColor: #111;
@@ -8,20 +8,14 @@ $darkShadowColor: #111;
 $lightBGColor: #eee;
 $lightMainTextColor: #555;
 $lightSubTextColor: #000;
-$lightShadowColor: #888;
-
-html, body{  
-  font-size: 22px;
-  font-family: 'Noto Sans JP',sans-serif;  
-  margin: 0;
-}
+$lightShadowColor: #666;
 
 .dark{
   background-color: $darkBGColor;
   color: $darkMainTextColor;
   & nav{
     background-color: $darkBGColor;
-    box-shadow: 0 0.1em 0.5em 0 $darkShadowColor;
+    box-shadow: 0 0.1em 0.3em 0 $darkShadowColor;
 
     & a, & button{
       color: #888;
@@ -65,7 +59,7 @@ html, body{
   & #portfolio {
 
     & .portfolio-item-wrapper{
-      box-shadow: 0em 0.2em 0.3em 0.2em $darkShadowColor;
+      box-shadow: 0em 0.1em 0.2em 0.1em $darkShadowColor;
 
       &.moreBtn h3, &.backBtn h3{
         color: $darkSubTextColor;
@@ -73,7 +67,7 @@ html, body{
     }
 
     & .moreDiv .portfolio-item-wrapper{
-      box-shadow: 0em 0.1em 0.2em 0.1em $darkShadowColor;
+      box-shadow: 0em 0.1em 0.1em 0.05em $darkShadowColor;
 
       &.moreBtn, &.backBtn{
         box-shadow: none;
@@ -90,7 +84,7 @@ html, body{
   color: $lightMainTextColor;
   & nav{
     background-color: $lightBGColor;
-    box-shadow: 0 0.1em 0.5em 0 $lightShadowColor;
+    box-shadow: 0 0.1em 0.3em 0 $lightShadowColor;
 
     & a, & button{
       color: #888;
@@ -136,7 +130,7 @@ html, body{
   & #portfolio {
 
     & .portfolio-item-wrapper{
-    box-shadow: 0em 0.2em 0.3em 0.2em $lightShadowColor;
+    box-shadow: 0em 0.1em 0.2em 0.1em $lightShadowColor;
 
       &.moreBtn h3, &.backBtn h3{
         color: $lightSubTextColor;
@@ -157,85 +151,31 @@ html, body{
   }
 }
 
-.root{
-  width: 100%;
+footer{  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 15vh;
+  
+  & h5{
+    margin: auto;
+    font-size: 0.7em;  
+    /* line-height: 8vh; */
+    font-weight: 400;
+    /* margin-bottom: 3em; */
+  }
 }
 
-.main-wrapper{
+html, body{  
+  font-size: 22px;
+  font-family: 'Noto Sans JP',sans-serif;  
+  margin: 0;
+}
+
+.main-container{
   margin: auto;
   width: 900px;
-}
-nav{  
-  position: fixed;  
-  top: 0;
-  left: 0;  
-  font-size: 1em;
-  width: 100%;
-  max-height: 3em;  
-  z-index: 1;
-
-  & .content-wrapper{
-    display: flex; 
-    justify-content: flex-end;
-    margin: auto;
-    line-height: 3em;
-    width: 900px;
-
-    & a, & button{
-      padding: 0;
-      margin: 0 0.2em;
-      border: none;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: 200;
-      text-decoration: none;
-      background-color: transparent;    
-      
-      &.curr{
-        color: #478fff;
-      }
-      &:hover{
-        border-bottom: solid 1px;
-      }
-
-      
-      &:focus{
-        outline: none;
-      }
-    }
-    & span{
-      font-weight: 100;
-    }
-
-    & .resume, & .opt{
-    }
-
-    & a.title{      
-      margin-left: 0;
-      margin-right: auto;      
-      transition: none;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-weight: 700;
-    }
-
-    & .resume a{
-    }
-
-    & .opt{      
-      & .la{
-        display: inline-block;    
-        & .curr{
-          color: #478fff;
-        }
-      }    
-      & button.darkMode{        
-        margin-left: 0.2em;
-        width: 1.4em;
-        height: 1.4em;
-        border-radius: 0.2em;
-      }    
-    }
-  } 
 }
 
 #portfolio, #about{
@@ -256,23 +196,7 @@ nav{
 
 #contact{
   padding-top: 10vh;
-  height: 70vh;
-}
-
-footer{  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 20vh;
-  
-  & h5{
-    margin: auto;
-    font-size: 0.7em;  
-    /* line-height: 8vh; */
-    font-weight: 400;
-    /* margin-bottom: 3em; */
-  }
+  height: 75vh;
 }
 
 @media all and (max-width: 1200px){
@@ -280,17 +204,51 @@ footer{
   html, body{
     font-size: 20px;
   }
-
-  .main-wrapper{
+  
+  nav .content-container{
     width: 800px;
+    font-size: 18px;
   }
 
-  nav .content-wrapper{
-    width: 800px;
-  }
+  #portfolio .main-container{
+    grid-template-columns: auto 800px auto;
+    & .sub-container{
+      width: 800px;
+    }
 
-  #portfolio .sub-wrapper{
-    width: 800px;
+    & .feat{
+      grid-template-columns: repeat(2, 400px);
+      grid-template-rows: repeat(2, 232px);
+      margin: 0;
+
+      & .portfolio-item-wrapper{
+        width: 368px; 
+        height: 207px;
+  
+        & .portfolio-item{
+          margin-top: calc(207px - 2em);
+        }
+      }
+    }
+
+    & .moreDiv{
+      grid-template-columns: repeat(3, 256px);
+      grid-template-rows: repeat(3, 160px);
+      margin: 0;
+
+      & .portfolio-item-wrapper{
+        width: 240px;
+        height: 144px;
+
+        & .portfolio-item{        
+          margin-top: calc(144px - 2em);
+        }
+      }
+    }
+
+    & .page-button-container button{
+      font-size: 1.5em;
+    }
   }
 }
 
@@ -299,7 +257,140 @@ footer{
   html, body{
     font-size: 18px;
   }
-  .main-wrapper, nav .content-wrapper, #portfolio .sub-wrapper{
+  nav .content-container{
+    font-size: 16px;
     width: 700px;
+  }
+  #summary, #about, #contact{
+    &.main-container{
+      width: 700px;
+    }
+  }
+
+  #portfolio .main-container{
+    grid-template-columns: auto 600px auto;
+    & .sub-container{
+      width: 600px;
+    }
+
+    & .feat{
+      grid-template-columns: repeat(2, 275px);
+      grid-template-rows: repeat(2, 163px);
+      margin: 0;
+
+      & .portfolio-item-wrapper{
+        width: 256px;
+        height: 144px;
+  
+        & .portfolio-item{
+          margin-top: calc(144px - 2em);
+        }
+      }
+    }
+
+    & .moreDiv{
+      grid-template-columns: repeat(3, 180px);
+      grid-template-rows: repeat(3, 110px);
+      margin: 0;
+
+      & .portfolio-item-wrapper{
+        width: 160px;
+        height: 90px;
+
+        & .portfolio-item{        
+          margin-top: calc(90px - 2em);
+        }
+      }
+    }
+
+    & .page-button-container button{
+      font-size: 1.5em;
+    }
+  }
+}
+
+@media all and (max-width: 420px){
+
+  html, body{
+    font-size: 13px;
+  }
+  nav .content-container, #portfolio .sub-container{
+    width: 340px;   
+    font-size: 14px; 
+  }
+  nav {
+    & div.nav-btn, & div.resume, & div.opt{
+      display: none;
+    }
+    & button.phone-rwd-mode-menu-btn{
+      display: inline;
+    }
+    & div.phone-rwd-mode-menu-container.show{
+      display: block;
+    }
+  }
+  #summary, #about, #contact{
+    &.main-container{
+      width: 300px;
+    }
+  }
+
+  #summary{
+    padding-top: 10vh;
+    height: 80vh;
+  }
+
+  #portfolio .main-container{
+    grid-template-columns: auto 300px auto;
+    & .sub-container{
+      width: 300px;
+    }
+
+    & .feat{
+      grid-template-columns: 240px;
+      grid-template-rows: repeat(4, 135px);
+
+      & .portfolio-item-wrapper{
+        width: 240px;
+        height: 135px;
+  
+        & .portfolio-item{
+          margin-top: calc(81px - 2em);
+        }
+      }
+    }
+
+    & .moreDiv{
+      grid-template-columns: repeat(3, 110px);
+      grid-template-rows: repeat(3, 68px);
+      margin: 0;
+
+      & .portfolio-item-wrapper{
+        width: 96px;
+        height: 54px;
+
+        & .portfolio-item{        
+          margin-top: calc(90px - 2em);
+        }
+      }
+    }
+
+    & .page-button-container button{
+      font-size: 1em;
+    }
+  
+  }
+
+  #about .content-container{
+    grid-template-rows: 40% 40%;
+  }
+
+  #contact .content-container{
+    grid-template-rows: 15% 35%;
+    & .links-container{
+      display: grid;
+      grid-template-columns: repeat(3, 2em);
+      grid-template-rows: repeat(2, 2em);
+    }
   }
 }

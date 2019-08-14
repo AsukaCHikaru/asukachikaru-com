@@ -45,7 +45,8 @@ export default class Portfolio extends Component {
   }
   renderNextPageBtn = () => {
     return(
-      <div className='page-button-container'>
+      <div className='page-button-container next'>
+        
         <button
           className={(this.state.showmore===true) ? 'hide next' : 'next'}
           onClick={() => {
@@ -75,17 +76,17 @@ export default class Portfolio extends Component {
    
     return (
       <div id='portfolio'>
-        <div className='main-wrapper'>
+        <div className='main-container'>
         {this.renderPrevPageBtn()}
-          <div className='sub-wrapper'>
+          <div className='sub-container'>
             <h1>SOME THINGS I'VE BUILT</h1>
-            <div className='content-wrapper'>
-              <div className='semi-content-wrapper' >
+            <div className='content-container'>
+              <div className='semi-content-container' >
                 <div className='feat' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
                   {this.renderFeatPortfolios()}
                 </div>
               </div>
-              <div className='semi-content-wrapper' >
+              <div className='semi-content-container' >
                 <div className='moreDiv' style={{left: (this.state.showmore) ? `-100%` : '0'}}>
                   {this.renderMorePortfolios()}
                 </div>

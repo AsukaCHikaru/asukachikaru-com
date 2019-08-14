@@ -36,8 +36,8 @@ export default class Summary extends Component {
 
   render() {
     return (
-      <div id='summary' className='main-wrapper'>
-        {/* <div className='content-wrapper'> */}
+      <div id='summary' className='main-container'>
+        {/* <div className='content-container'> */}
           <div className='intro'>
             {this.renderIntro()}
             {/* <h1>Hi, </h1>

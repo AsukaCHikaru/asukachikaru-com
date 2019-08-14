@@ -35,7 +35,7 @@ export default class PortfolioItem extends Component {
 
   renderPortfolioItemContent = () => {
     const style = {
-      backgroundColor:`#252525EE`
+      backgroundColor:`#181818ee`
     }
     const className = (this.state.isHovered) ? 'portfolio-item hovered' : 'portfolio-item';
     return (

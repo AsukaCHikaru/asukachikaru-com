@@ -38,9 +38,9 @@ export default class About extends Component {
   render() {
     const la = this.props.la;
     return (
-      <div id='about' className='main-wrapper'>
+      <div id='about' className='main-container'>
         <h1>ABOUT ME</h1>
-        <div className='content-wrapper'>
+        <div className='content-container'>
           <p>{ABOUT.p[la]}</p>          
           {this.renderLists('skills')}          
         </div>

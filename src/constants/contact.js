@@ -2,7 +2,7 @@ export const CONTACT = {
   p: {
     en: 'You can find me at below links. Feel free to contact me!',
     zh: '您可以透過以下連結聯繫我：',
-    ja: '下記リンクからご気軽にどうぞ：'
+    ja: 'ご連絡は下記リンクからどうぞ：'
   },
   href: {
     mail: 'asukachikaru@gmail.com',

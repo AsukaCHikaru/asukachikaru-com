@@ -53,7 +53,7 @@ export const portfolio = {
         title: "The work is undone.",
         href: "https://blog.asukachikaru.com",
         repo: "https://github.com/AsukaCHikaru/blog",
-        about: "My blog. Completely handmade, 0 blog host service used.",
+        about: "My blog. Handmade, 0 blog host service or template used.",
         builtWith: ["React Redux", "React Router"],
         time: "2019",
         img: "the-work-is-undone.png",

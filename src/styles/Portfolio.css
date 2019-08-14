@@ -1,28 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700|Work+Sans:400,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
 
-#portfolio .main-wrapper{
+#portfolio .main-container{
   width: 100%;
   display: grid;
   grid-template-columns: auto 900px auto;
 
-  & .sub-wrapper{
+  & .sub-container{
     grid-column-start: 2;
     margin: 0 auto;
     width: 900px;
   }
 
-  & .content-wrapper{
+  & .content-container{
     margin: auto;
     display: flex; 
     flex-direction: row;
     padding: auto;
     height: 85%;
     overflow: hidden;
-    
   }
 
-  & .semi-content-wrapper{
+  & .semi-content-container{
     display: flex;
     justify-content: center;
     min-width: 100%;
@@ -30,26 +29,28 @@
 
   & .feat{
     display: grid;
-    grid-template-columns: 18em 18em;
-    grid-template-rows: 11em 11em;
+    grid-template-columns: repeat(2, 395px);
+    grid-template-rows: repeat(2, 240px);
     position: relative;
     margin: 0 auto auto auto;
     transition: all 0.5s ease;
 
     & .portfolio-item-wrapper{
-      width: 16em;
-      height: 9em;
+      width: 355px;
+      height: 200px;
 
       & .portfolio-item{
-        margin-top: 7em;
+        margin-top: calc(200px - 2em);
       }
     }
   }
   & .moreDiv{
     display: grid;
     position: relative;    
-    grid-template-columns: 15.3em 15.3em 15.3em;
-    grid-template-rows: 9.1em 9.1em 9.1em;
+    grid-template-columns: repeat(3, 15.3em);
+    grid-template-rows: repeat(3, 9.1em);
+    /* grid-template-columns: 15.3em 15.3em 15.3em; */
+    /* grid-auto-rows: 9.1em 9.1em 9.1em; */
     transition: all 0.5s ease;
     font-size: 0.8em;
     margin: 0;
@@ -123,7 +124,7 @@
 
     & button{
       width: 1em;
-      font-size: 2em;
+      font-size: 2em;      
       background-color: transparent;
       border: none;
       cursor: pointer;
