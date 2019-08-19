@@ -27,7 +27,7 @@ $lightShadowColor: #666;
 
     & div.phone-rwd-mode-menu-wrapper {
       background-color: $darkBGColor;
-      & div.phone-rwd-mode-menu-container{
+      & div.phone-rwd-mode-menu-container {
         background-color: $darkBGColor;
       }
       & button.dark-mode {
@@ -68,10 +68,13 @@ $lightShadowColor: #666;
   }
 
   & #portfolio {
+    & .page-button-container button {
+      color: $darkMainTextColor;
+    }
     & .portfolio-item-wrapper {
       box-shadow: 0em 0.1em 0.2em 0.1em $darkShadowColor;
 
-      &.moreBtn h3,
+      /* &.moreBtn h3, */
       &.backBtn h3 {
         color: $darkSubTextColor;
       }
@@ -85,10 +88,6 @@ $lightShadowColor: #666;
         box-shadow: none;
       }
     }
-
-    & .page-button-container button {
-      color: $darkMainTextColor;
-    }
   }
 }
 .light {
@@ -100,7 +99,7 @@ $lightShadowColor: #666;
 
     & div.phone-rwd-mode-menu-wrapper {
       background-color: $lightBGColor;
-      & div.phone-rwd-mode-menu-container{
+      & div.phone-rwd-mode-menu-container {
         background-color: $lightBGColor;
       }
       & button.dark-mode {
@@ -358,7 +357,7 @@ body {
     & div.phone-rwd-mode-menu-wrapper.show {
       display: flex;
       justify-content: center;
-    }    
+    }
   }
   #summary,
   #about,
@@ -374,9 +373,9 @@ body {
   }
 
   #portfolio .main-container {
-    grid-template-columns: auto 260px auto;
+    grid-template-columns: auto 300px auto;
     & .sub-container {
-      width: 260px;
+      width: 300px;
     }
 
     & .feat {
@@ -394,23 +393,17 @@ body {
     }
 
     & .moreDiv {
-      grid-template-columns: repeat(3, 110px);
-      grid-template-rows: repeat(3, 68px);
-      margin: 0;
-
-      & .portfolio-item-wrapper {
-        width: 96px;
-        height: 54px;
-
-        & .portfolio-item {
-          margin-top: calc(90px - 2em);
-        }
+      display: block;
+      width: 100%;
+      & ul {
+        list-style: none;
+        padding: 0;
       }
     }
 
     & .page-button-container {
       &.next {
-        margin: 0;        
+        margin: 0;
       }
       & button {
         padding: 0;

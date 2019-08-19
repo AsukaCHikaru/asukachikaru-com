@@ -26,8 +26,8 @@ export const portfolio = {
     "3": {
         title: "Node Chat App",
         repo: "https://github.com/AsukaCHikaru/node-chat-app",
-        about: "",
-        builtWith: ["Node.js", "jQuery"],
+        about: "Client-server real time chat app implementation.",
+        builtWith: ["Node.js", "jQuery", "Express"],
         time: "2017",
         img: "node-chat-app.png",
     },
@@ -54,7 +54,7 @@ export const portfolio = {
         href: "https://blog.asukachikaru.com",
         repo: "https://github.com/AsukaCHikaru/blog",
         about: "My blog. Handmade, 0 blog host service or template used.",
-        builtWith: ["React Redux", "React Router"],
+        builtWith: ["React", "React Redux", "React Router"],
         time: "2019",
         img: "the-work-is-undone.png",
         featured: true
