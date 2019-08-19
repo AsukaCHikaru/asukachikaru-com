@@ -22,15 +22,15 @@ export default class PortfolioItem extends Component {
     else return null;
   }
   renderExtLink = () => {
-      if(this.props.item.href !== undefined) return (
-        <a
-          className='ext-link'
-          href={this.props.item.href}
-          rel='noopener noreferrer'
-          target='_blank'
-        ><FontAwesomeIcon icon={faExternalLink}/></a>
-      )
-      else return null;
+    if(this.props.item.href !== undefined) return (
+      <a
+        className='ext-link'
+        href={this.props.item.href}
+        rel='noopener noreferrer'
+        target='_blank'
+      ><FontAwesomeIcon icon={faExternalLink}/></a>
+    )
+    else return null;
   }
 
   renderPortfolioItemContent = () => {
@@ -53,11 +53,14 @@ export default class PortfolioItem extends Component {
       backgroundImage:`url(${process.env.PUBLIC_URL}/${this.props.item.img})`,
       backgroundSize:`100% 100%`,
     };
+    console.log(this.state.isHovered);
     return (
+      
       <div
         className='portfolio-item-wrapper'
         onMouseEnter={()=>{this.setState({isHovered: true})}}
-        onMouseLeave ={()=>{this.setState({isHovered: false})}}        
+        onMouseLeave ={()=>{this.setState({isHovered: false})}}
+        onClick={() => this.setState(prevState => ({isHovered: !prevState.isHovered}))}
         style={wrapperStyle}
       >
         {this.renderPortfolioItemContent()}

@@ -388,6 +388,9 @@ body {
 
         & .portfolio-item {
           margin-top: calc(126px - 2em);
+          &.hovered {
+            margin-top: 0;
+          }
         }
       }
     }

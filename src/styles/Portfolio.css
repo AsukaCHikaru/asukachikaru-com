@@ -105,23 +105,27 @@
       &.hovered {
         margin-top: 0;
       }
+      
 
       & h3 {
         color: #eee;
         margin: 0;
         padding: 0.5em;
+        /* padding: 0.5em 0.5em 0.3em 0.5em; */
         font-size: 1em;
         font-weight: 400;
       }
       & p {
         margin: 0;
         padding: 0 0.5em;
+        line-height: 1.2em;
         /* padding-bottom: 0.5em; */
         font-size: 0.9em;
       }
       & h4 {
         margin: 0;
-        padding: 0.5em;
+        padding: 0.5em 0.5em 0.3em 0.5em;
+        /* padding: 0.5em; */
         font-size: 0.95em;
         font-weight: 400;
         color: #01ce42;
