@@ -40,11 +40,6 @@ export default class Summary extends Component {
         {/* <div className='content-container'> */}
           <div className='intro'>
             {this.renderIntro()}
-            {/* <h1>Hi, </h1>
-            <h1>my name is <span className='name'>Asuka Wang</span>.</h1>
-            <h2>I'm a self-taught <span className='front-end'>Front-End</span> web developer</h2>
-            <h2>based in <span className='base'>Fukuoka, Japan</span>.</h2>
-            <h2>I love <span className='passion'>learning and building</span> web stuff.</h2> */}
           </div>
           <div className='start'>
             <h2 onClick={() => {

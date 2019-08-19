@@ -82,26 +82,42 @@ nav{
     }
   }
 
-  & div.phone-rwd-mode-menu-container{
+  & div.phone-rwd-mode-menu-wrapper{
     display: none;
     position: fixed;
-    right: 0;
-    top: 3em;
+    width: 100vw;
+    height: 100px;
+    top: calc(3em - 0.2em);
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 0.1em 0.1em 0 #111;
+  }
+  & div.phone-rwd-mode-menu-container{
+    display: block;
+    margin: 0 auto;
+    width: 340px;
+    left: 0;
     z-index: 2;
     background-color: #eee;
-    box-shadow: 0 0.1em 0.1em 0 #111;
     & div.nav-btn-container{
       display: grid;
-      grid-template-columns: repeat(3, 60px);
+      grid-template-columns: repeat(3, 60px) auto 60px;
       height: 45px;
-      &.other{
-        & a{
-          margin: auto;
-        }
-        & button.darkMode{
-          grid-column-start: 3;
-        }
+      & a.resume{
+        margin: auto;
+        grid-column-start: 5;        
       }
+      & div.dark-mode-btn-wrapper{
+        grid-column-start: 5;
+        display: flex;
+        justify-content: center;
+        & button.dark-mode{
+          margin: auto;
+          width: 30px;
+          height: 30px;
+          border-radius: 4px;
+        }
+      }      
     }
   }
 }

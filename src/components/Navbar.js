@@ -21,7 +21,7 @@ export default class Navbar extends Component {
       left: 0,
       behavior: "smooth"
     });
-    if(this.state.showRwdModeMenu) this.handleClickRwdModeMenuBtn();
+    if (this.state.showRwdModeMenu) this.handleClickRwdModeMenuBtn();
   };
   renderLaList = () => {
     let laList = [];
@@ -35,7 +35,10 @@ export default class Navbar extends Component {
       <button
         key={`opt-la-${i}`}
         className={this.props.la === la.key ? "curr" : ""}
-        onClick={() => this.props.changeLa(la.key)}
+        onClick={() => {
+          this.props.changeLa(la.key)
+          if (this.state.showRwdModeMenu) this.handleClickRwdModeMenuBtn();
+        }}
       >
         {la.string}
       </button>
@@ -61,48 +64,60 @@ export default class Navbar extends Component {
           >
             <FontAwesomeIcon icon={faBars} />
           </button>
-          <div
-            className={
-              this.state.showRwdModeMenu
-                ? "phone-rwd-mode-menu-container show"
-                : "phone-rwd-mode-menu-container"
-            }
-          >
-            <div className="para nav-btn-container">
-              <button
-                className={this.props.currSec === "portfolio" ? "curr" : ""}
-                onClick={() => this.handleClick("portfolio")}
-              >
-                portfolio
-              </button>
-              <button
-                className={this.props.currSec === "about" ? "curr" : ""}
-                onClick={() => this.handleClick("about")}
-              >
-                about
-              </button>
-              <button
-                className={this.props.currSec === "contact" ? "curr" : ""}
-                onClick={() => this.handleClick("contact")}
-              >
-                contact
-              </button>
-            </div>
-            <div className="lan nav-btn-container">{this.renderLaList()}</div>
-            <div className="other nav-btn-container">
-              <a
-                href="https://drive.google.com/file/d/16fU5vRsJIjSC2Rj6DmrsdPbJ8NtizD_x/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                resume
-              </a>
-              <button
-                className="darkMode"
-                onClick={() => this.props.changeDarkMode()}
-              >
-                <FontAwesomeIcon icon={this.props.dark ? faSun : faMoon} />
-              </button>
+          <div className={
+            this.state.showRwdModeMenu
+              ? "phone-rwd-mode-menu-wrapper show"
+              : "phone-rwd-mode-menu-wrapper"
+          }>
+            <div
+              className={
+                this.state.showRwdModeMenu
+                  ? "phone-rwd-mode-menu-container show"
+                  : "phone-rwd-mode-menu-container"
+              }
+            >
+              <div className="para nav-btn-container">
+                <button
+                  className={this.props.currSec === "portfolio" ? "curr" : ""}
+                  onClick={() => this.handleClick("portfolio")}
+                >
+                  portfolio
+                </button>
+                <button
+                  className={this.props.currSec === "about" ? "curr" : ""}
+                  onClick={() => this.handleClick("about")}
+                >
+                  about
+                </button>
+                <button
+                  className={this.props.currSec === "contact" ? "curr" : ""}
+                  onClick={() => this.handleClick("contact")}
+                >
+                  contact
+                </button>
+                <a
+                  className='resume'
+                  href="https://drive.google.com/file/d/16fU5vRsJIjSC2Rj6DmrsdPbJ8NtizD_x/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  resume
+                </a>
+              </div>
+              <div className="lan nav-btn-container">
+                {this.renderLaList()}
+                <div className="dark-mode-btn-wrapper">
+                  <button
+                    className="dark-mode"
+                    onClick={() => {
+                      this.props.changeDarkMode();
+                      if (this.state.showRwdModeMenu) this.handleClickRwdModeMenuBtn();
+                    }}
+                  >
+                    <FontAwesomeIcon icon={this.props.dark ? faSun : faMoon} />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div className="nav-btn">
