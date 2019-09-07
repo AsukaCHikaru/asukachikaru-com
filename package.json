@@ -71,7 +71,9 @@
     "start-js": "node scripts/start.js",
     "start": "npm run watch:css & npm run start-js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "npm run build",
+    "deploy": "aws s3 sync .build $AWS_S3_BUCKET_NAME_PORTFOLIO"
   },
   "eslintConfig": {
     "extends": "react-app"
