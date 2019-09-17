@@ -379,15 +379,15 @@ body {
     }
 
     & .feat {
-      grid-template-columns: 240px;
-      grid-template-rows: repeat(4, 135px);
+      grid-template-columns: 176px;
+      grid-template-rows: repeat(4, 99px);
 
       & .portfolio-item-wrapper {
-        width: 224px;
-        height: 126px;
+        width: 160px;
+        height: 90px;
 
         & .portfolio-item {
-          margin-top: calc(126px - 2em);
+          margin-top: calc(90px - 2em);
           &.hovered {
             margin-top: 0;
           }

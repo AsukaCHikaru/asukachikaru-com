@@ -67,5 +67,15 @@ export const portfolio = {
         builtWith: ["React"],
         time: "2019",
         img: "asukachikaru-com.png"
+    },
+    "8": {
+        title: "Hangul quiz",
+        href: "https://asukachikaru.github.io/hangul-quiz/",
+        repo: "https://github.com/AsukaCHikaru/hangul-quiz",
+        about: "Hangul memorizer game SPA.",
+        builtWith: ["Vue", "GSAP"],
+        time: "2019",
+        img: "hangul-quiz.png",
+        featured: true
     }
 }

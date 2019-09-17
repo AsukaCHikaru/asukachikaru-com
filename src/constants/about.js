@@ -17,7 +17,7 @@ export const ABOUT = {
           ja: 'フロントエンド',
           en: 'Front-End'
         },
-        content: ['JavaScript', 'CSS', 'React.js', 'jQuery'],
+        content: ['JavaScript', 'CSS', 'React.js', 'Vue.js', 'jQuery'],
       },
       {
         meta: {
